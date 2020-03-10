@@ -1,0 +1,16 @@
+{
+  "name": "jhu-csse-action",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node src/jhu-csse.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Preetam D'Souza",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1",
+    "node-fetch": "^2.6.0"
+  }
+}
