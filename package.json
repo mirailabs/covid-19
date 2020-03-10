@@ -1,0 +1,14 @@
+{
+  "name": "covid-19",
+  "version": "1.0.0",
+  "description": "COVID-19 Tracker",
+  "scripts": {
+    "build": "node src/jhu-csse.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Preetam D'Souza",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
