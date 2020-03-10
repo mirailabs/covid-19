@@ -1,7 +1,7 @@
 {
-  "name": "jhu-csse-action",
+  "name": "covid-19",
   "version": "1.0.0",
-  "description": "",
+  "description": "COVID-19 Tracker",
   "scripts": {
     "build": "node src/jhu-csse.js",
     "test": "echo \"Error: no test specified\" && exit 1"
