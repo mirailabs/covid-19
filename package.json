@@ -9,8 +9,6 @@
   "keywords": [],
   "author": "Preetam D'Souza",
   "dependencies": {
-    "@actions/core": "^1.2.3",
-    "@actions/github": "^2.1.1",
     "node-fetch": "^2.6.0"
   }
 }
