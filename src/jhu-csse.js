@@ -1,21 +1,18 @@
 const fetch = require("node-fetch");
 const fs = require("fs");
+const util = require("./util");
 
 // Source: https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data
 // File naming convention is MM-DD-YYYY.csv in UTC
 // Updates happen once a day at 23:59 UTC
 
-const dir = "data/jhu-csse";
-const padTwo = s => s.padStart(2, "0");
+const DIR = "data/jhu-csse";
 
 function today() {
   const date = new Date();
   // We want the previous day since the updates happen a minute before midnight.
   date.setDate(date.getDate() - 1);
-  const month = padTwo((date.getUTCMonth() + 1).toString());
-  const day = padTwo(date.getUTCDate().toString());
-  const year = date.getUTCFullYear();
-  return `${month}-${day}-${year}`;
+  return util.getFilename(date);
 }
 
 async function fetchData(file) {
@@ -34,8 +31,8 @@ async function run() {
     const data = await fetchData(file);
     console.log("Successfully fetched data!");
     console.log(data);
-    fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(`${dir}/${file}`, data);
+    fs.mkdirSync(DIR, { recursive: true });
+    fs.writeFileSync(`${DIR}/${file}`, data);
   } catch (error) {
     console.error(error);
   }
