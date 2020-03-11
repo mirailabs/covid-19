@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "COVID-19 Tracker",
   "scripts": {
-    "build": "node src/jhu-csse.js",
+    "build": "node src/jhu-csse.js; node src/ny.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Preetam D'Souza",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "csvjson-csv2json": "^5.0.6",
+    "csvjson-json2csv": "^1.0.3",
     "node-fetch": "^2.6.0"
   }
 }
