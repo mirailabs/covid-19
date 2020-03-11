@@ -3,11 +3,12 @@ const csv2json = require("csvjson-csv2json");
 const json2csv = require("csvjson-json2csv");
 const util = require("./util");
 
-const DIR = "data";
+const ROOT_DIR = "data";
 
 exports.set = function(doc, id, record) {
   const file = `${util.getTimestamp(new Date())}.csv`;
-  const path = `${DIR}/${doc}/${file}`;
+  const dir = `${ROOT_DIR}/${doc}`;
+  const path = `${dir}/${file}`;
 
   let json;
   try {
@@ -15,7 +16,7 @@ exports.set = function(doc, id, record) {
     json = csv2json(csv, { parseNumbers: true });
   } catch (error) {
     // assume file does not exist
-    console.warn(error);
+    console.warn(`Could not find '${path}' - is this the first write?`, error);
   }
 
   if (json) {
@@ -30,6 +31,6 @@ exports.set = function(doc, id, record) {
   }
 
   const csv = json2csv(json);
-  fs.mkdirSync(DIR, { recursive: true });
+  fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path, csv);
 };
