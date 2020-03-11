@@ -2,14 +2,14 @@ const fetch = require("node-fetch");
 const cheerio = require("cheerio");
 const db = require("./db");
 
-// Source: https://health.ny.gov/diseases/communicable/coronavirus/
+// Source: http://www.vdh.virginia.gov/surveillance-and-investigation/novel-coronavirus/
 
 const DOC = "us";
-const STATE = "New York";
+const STATE = "Virginia";
 
 async function fetchData() {
   const response = await fetch(
-    `https://health.ny.gov/diseases/communicable/coronavirus/`
+    "http://www.vdh.virginia.gov/surveillance-and-investigation/novel-coronavirus/"
   );
   if (!response.ok) {
     throw new Error(`[${response.status}] Server error`);
@@ -20,11 +20,13 @@ async function fetchData() {
 async function scrape() {
   const data = await fetchData();
 
-  const $ = cheerio.load(data);
-  const totalRows = $("tr.total_row");
-  const stateWideRow = totalRows[1];
-  const stateWideCases = $("td", stateWideRow)[1];
-  return $(stateWideCases).text();
+  const matches = data.match(
+    /Number of Presumptive Positive or Confirmed Cases: (\d+)/
+  );
+  if (!matches) {
+    throw new Error("Failed to scrape data");
+  }
+  return Number(matches[1]);
 }
 
 async function run() {
@@ -36,8 +38,8 @@ async function run() {
       Confirmed: Number(confirmed),
       Deaths: 0,
       Recovered: 0,
-      Latitude: 30.9756,
-      Longitude: 112.2707
+      Latitude: 37.7693,
+      Longitude: -78.17
     });
     console.log(`Updated ${STATE}`);
   } catch (error) {
