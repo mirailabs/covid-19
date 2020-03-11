@@ -7,3 +7,4 @@ Automated tracker for COVID-19.
 ### Data Sources
 
 * [John Hopkins CSSE](https://github.com/CSSEGISandData/COVID-19)
+* [New York State Department of Health](https://health.ny.gov/diseases/communicable/coronavirus/)
