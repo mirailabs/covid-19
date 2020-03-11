@@ -12,7 +12,7 @@ function today() {
   const date = new Date();
   // We want the previous day since the updates happen a minute before midnight.
   date.setDate(date.getDate() - 1);
-  return util.getFilename(date);
+  return util.getTimestamp(date);
 }
 
 async function fetchData(file) {

@@ -1,13 +1,10 @@
 const fetch = require("node-fetch");
 const cheerio = require("cheerio");
-const fs = require("fs");
-const csv2json = require("csvjson-csv2json");
-const json2csv = require("csvjson-json2csv");
-const util = require("./util");
+const db = require("./db");
 
 // Source: https://health.ny.gov/diseases/communicable/coronavirus/
 
-const DIR = "data/us";
+const DOC = "us";
 const STATE = "New York";
 
 async function fetchData() {
@@ -32,17 +29,8 @@ async function scrape() {
 
 async function run() {
   try {
-    const file = `${util.getFilename(new Date())}.csv`;
-    const path = `${DIR}/${file}`;
-
     const confirmed = await scrape();
-    if (isNaN(confirmed)) {
-      throw new TypeError(
-        `Expected a number for confirmed cases, but got ${confirmed}`
-      );
-    }
-
-    const record = {
+    db.set(DOC, STATE, {
       State: STATE,
       "Last Update": new Date().toISOString(),
       Confirmed: Number(confirmed),
@@ -50,32 +38,8 @@ async function run() {
       Recovered: 0,
       Latitude: 30.9756,
       Longitude: 112.2707
-    };
-
-    let json;
-    try {
-      const csv = fs.readFileSync(`${DIR}/${file}`, { encoding: "utf8" });
-      json = csv2json(csv, { parseNumbers: true });
-    } catch (error) {
-      // assume file does not exist
-      console.warn(error);
-    }
-
-    if (json) {
-      prevRecord = json.find(r => r.State === STATE);
-      if (prevRecord) {
-        prevRecord.Confirmed = confirmed;
-      } else {
-        json.push(record);
-      }
-    } else {
-      json = [record];
-    }
-
-    const csv = json2csv(json);
-    fs.mkdirSync(DIR, { recursive: true });
-    fs.writeFileSync(path, csv);
-    console.log(`Updated '${path}' with the latest data from ${STATE}`);
+    });
+    console.log(`Updated ${STATE}`);
   } catch (error) {
     console.error(error);
   }
