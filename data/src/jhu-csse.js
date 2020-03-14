@@ -6,7 +6,7 @@ const util = require("./util");
 // File naming convention is MM-DD-YYYY.csv in UTC
 // Updates happen once a day at 23:59 UTC
 
-const DIR = "data/jhu-csse";
+const DIR = "db/jhu-csse";
 
 function today() {
   const date = new Date();
