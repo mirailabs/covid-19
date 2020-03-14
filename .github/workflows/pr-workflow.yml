@@ -26,10 +26,10 @@ jobs:
           node-version: "13.x"
 
       - name: Install dependencies
-        run: npm ci
+        run: cd data && npm ci
 
       - name: Fetch data
-        run: npm run build
+        run: cd data && npm run build
 
       - name: Commit files
         run: |
