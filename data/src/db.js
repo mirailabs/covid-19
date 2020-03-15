@@ -3,7 +3,7 @@ const csv2json = require("csvjson-csv2json");
 const json2csv = require("csvjson-json2csv");
 const util = require("./util");
 
-const ROOT_DIR = "data";
+const ROOT_DIR = "db";
 
 exports.set = function(doc, id, record) {
   const file = `${util.getTimestamp(new Date())}.csv`;
