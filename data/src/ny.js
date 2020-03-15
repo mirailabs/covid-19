@@ -22,7 +22,7 @@ async function scrape() {
 
   const $ = cheerio.load(data);
   const totalRows = $("tr.total_row");
-  const stateWideRow = totalRows[1];
+  const stateWideRow = totalRows[2];
   const stateWideCases = $("td", stateWideRow)[1];
   return $(stateWideCases).text();
 }
