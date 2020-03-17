@@ -2,15 +2,13 @@ const fetch = require("node-fetch");
 const cheerio = require("cheerio");
 const db = require("./db");
 
-// Source: https://health.ny.gov/diseases/communicable/coronavirus/
-
+const URL =
+  "https://coronavirus.health.ny.gov/county-county-breakdown-positive-cases";
 const DOC = "us";
 const STATE = "New York";
 
 async function fetchData() {
-  const response = await fetch(
-    `https://health.ny.gov/diseases/communicable/coronavirus/`
-  );
+  const response = await fetch(URL);
   if (!response.ok) {
     throw new Error(`[${response.status}] Server error`);
   }
@@ -21,10 +19,9 @@ async function scrape() {
   const data = await fetchData();
 
   const $ = cheerio.load(data);
-  const totalRows = $("tr.total_row");
-  const stateWideRow = totalRows[2];
-  const stateWideCases = $("td", stateWideRow)[1];
-  return $(stateWideCases).text();
+  return $("tr:last-child > td:last-child > strong")
+    .text()
+    .replace(",", "");
 }
 
 async function run() {
