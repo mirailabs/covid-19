@@ -61,6 +61,6 @@ This repository continuously archives case data under [/data/db](https://github.
 ### Sources
 
 * [John Hopkins CSSE](https://github.com/CSSEGISandData/COVID-19)
-* [New York State Department of Health](https://health.ny.gov/diseases/communicable/coronavirus/)
+* [New York State Department of Health](https://coronavirus.health.ny.gov/county-county-breakdown-positive-cases)
 * [Virginia State Department of Health](http://www.vdh.virginia.gov/surveillance-and-investigation/novel-coronavirus/)
 
