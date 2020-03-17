@@ -19,9 +19,15 @@ async function scrape() {
   const data = await fetchData();
 
   const $ = cheerio.load(data);
-  return $("tr:last-child > td:last-child > strong")
-    .text()
-    .replace(",", "");
+  const confirmed = parseInt(
+    $("tr:last-child > td:last-child > strong")
+      .text()
+      .replace(",", "")
+  );
+  if (!confirmed) {
+    throw new Error("Failed to scrape data");
+  }
+  return confirmed;
 }
 
 async function run() {
@@ -30,7 +36,7 @@ async function run() {
     db.set(DOC, STATE, {
       State: STATE,
       "Last Update": new Date().toISOString(),
-      Confirmed: Number(confirmed),
+      Confirmed: confirmed,
       Deaths: 0,
       Recovered: 0,
       Latitude: 30.9756,
