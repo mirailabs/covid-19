@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const csv2json = require("csvjson-csv2json");
 const json2csv = require("csvjson-json2csv");
 const util = require("./util");
@@ -33,4 +34,10 @@ exports.set = function(doc, id, record) {
   const csv = json2csv(json);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path, csv);
+};
+
+exports.writeFile = function(filePath, data) {
+  const finalPath = `${ROOT_DIR}/${filePath}`;
+  fs.mkdirSync(path.dirname(finalPath), { recursive: true });
+  fs.writeFileSync(finalPath, data);
 };

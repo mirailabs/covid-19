@@ -1,11 +1,12 @@
 const fs = require("fs");
 const util = require("./util");
+const db = require("./db");
 
 // Source: https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data
 // File naming convention is MM-DD-YYYY.csv in UTC
 // Updates happen once a day at 23:59 UTC
 
-const DIR = "db/jhu-csse";
+const DIR = "jhu-csse";
 
 function today() {
   const date = new Date();
@@ -24,11 +25,12 @@ async function fetchData(file) {
 async function run() {
   try {
     const file = `${today()}.csv`;
+    const path = `${DIR}/${file}`;
     const data = await fetchData(file);
-    console.log("Successfully fetched data!");
-    console.log(data);
-    fs.mkdirSync(DIR, { recursive: true });
-    fs.writeFileSync(`${DIR}/${file}`, data);
+
+    db.writeFile(path, data);
+
+    console.log(`Updated ${path}`);
   } catch (error) {
     console.error(error);
   }
