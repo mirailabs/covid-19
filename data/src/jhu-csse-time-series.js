@@ -13,16 +13,26 @@ async function fetchFile(file) {
   return response.text();
 }
 
+function adaptKey(k) {
+  const map = {
+    "Province/State": "province",
+    "Country/Region": "country",
+    Lat: "latitude",
+    Long: "longitude",
+  };
+  return map[k] || k;
+}
+
 function consolidate(series, title) {
-  const isDate = s => s.match(/\d+\/\d+\/\d+/);
-  let regions = series.map(region => {
+  const isDate = (s) => s.match(/\d+\/\d+\/\d+/);
+  let regions = series.map((region) => {
     return Object.keys(region).reduce(
       (acc, k) => {
         if (isDate(k)) {
           // consolidate
           acc[title].push(region[k]);
         } else {
-          acc[k] = region[k];
+          acc[adaptKey(k)] = region[k];
         }
         return acc;
       },
@@ -31,14 +41,14 @@ function consolidate(series, title) {
   });
   return {
     dates: Object.keys(series[0]).filter(isDate),
-    regions
+    regions,
   };
 }
 
 function merge(c, d, r) {
   let ret = {
     dates: c.dates,
-    regions: []
+    regions: [],
   };
   for (let i = 0; i < c.regions.length; ++i) {
     ret.regions[i] = Object.assign(
