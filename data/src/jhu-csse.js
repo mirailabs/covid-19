@@ -1,4 +1,3 @@
-const fetch = require("node-fetch");
 const fs = require("fs");
 const util = require("./util");
 
@@ -16,12 +15,9 @@ function today() {
 }
 
 async function fetchData(file) {
-  const response = await fetch(
+  const response = await util.fetch(
     `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/${file}`
   );
-  if (!response.ok) {
-    throw new Error(`[${response.status}] Server error`);
-  }
   return response.text();
 }
 
