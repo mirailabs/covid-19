@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "COVID-19 Tracker",
   "scripts": {
-    "build": "node src/jhu-csse.js; node src/ny.js; node src/va.js",
+    "build": "node src/jhu-csse.js; node src/jhu-csse-time-series.js; node src/ny.js; node src/va.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
