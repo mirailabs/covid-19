@@ -51,12 +51,15 @@ function merge(c, d, r) {
     regions: [],
   };
   for (let i = 0; i < c.regions.length; ++i) {
-    ret.regions[i] = Object.assign(
-      {},
-      c.regions[i],
-      d.regions[i],
-      r.regions[i]
-    );
+    const { province, country } = c.regions[i];
+
+    // Need to use find because the indexes sometimes don't match between the series
+    const pred = (region) =>
+      region.province === province && region.country === country;
+    const dr = d.regions.find(pred);
+    const rr = r.regions.find(pred);
+
+    ret.regions[i] = Object.assign({}, c.regions[i], dr, rr);
   }
   return ret;
 }
