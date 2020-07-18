@@ -34,7 +34,7 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "github-actions"
           git add .
-          git commit -m 'build: Update data'
+          git commit -m 'build: Update data' || true
 
       - name: Push changes
         uses: ad-m/github-push-action@fe38f0a751bf9149f0270cc1fe20bf9156854365
