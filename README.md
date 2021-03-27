@@ -61,3 +61,9 @@ This repository continuously archives case data under [/data/db](https://github.
 ### Sources
 
 - [John Hopkins CSSE](https://github.com/CSSEGISandData/COVID-19)
+
+## Showcase
+
+Here are a list of apps using this API:
+
+- https://covid19.mirailabs.io/
