@@ -511,7 +511,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,Tacna,Peru,2022-09-14 04:20:44,-17.644161,-70.27756,60318,2178,,,"Tacna, Peru",16258.22102425876,3.610862429125634
 ,,Tumbes,Peru,2022-09-14 04:20:44,-3.857496,-80.545255,31491,1720,,,"Tumbes, Peru",12521.27236580517,5.461877996888
 ,,Ucayali,Peru,2022-09-14 04:20:44,-9.621718,-73.444929,43006,3291,,,"Ucayali, Peru",7300.288575793584,7.652420592475469
-,,Unknown,Peru,2022-09-14 04:20:44,,,441,26,,,"Unknown, Peru",,5.895691609977324
+,,Unknown,Peru,2022-09-14 04:20:44,,,1591,48,,,"Unknown, Peru",,3.016970458830924
 ,,,Philippines,2022-09-14 04:20:44,12.879721,121.774017,3909772,62382,,,Philippines,3567.925979196136,1.5955406095291491
 ,,,Poland,2022-09-14 04:20:44,51.9194,19.1451,6221132,117280,,,Poland,16437.75445644332,1.8851874546304435
 ,,,Portugal,2022-09-14 04:20:44,39.3999,-8.2245,5448713,24931,,,Portugal,53436.00634989316,0.4575575920405424
@@ -3999,6 +3999,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,Jersey,United Kingdom,2022-09-14 04:20:44,49.2138,-2.1358,59270,137,,,"Jersey, United Kingdom",54226.89844464776,0.23114560485911928
 ,,Montserrat,United Kingdom,2022-09-14 04:20:44,16.742498,-62.187366,1276,8,,,"Montserrat, United Kingdom",25525.1050210042,0.6269592476489029
 ,,Northern Ireland,United Kingdom,2022-09-14 04:20:44,54.7877,-6.4923,713294,4831,,,"Northern Ireland, United Kingdom",37908.90731292517,0.6772803360185281
+,,Pitcairn Islands,United Kingdom,2022-09-14 04:20:44,-24.3768,-128.3242,4,0,,,"Pitcairn Islands, United Kingdom",0.0,0.0
 ,,"Saint Helena, Ascension and Tristan da Cunha",United Kingdom,2022-09-14 04:20:44,-7.9467,-14.3559,7,0,,,"Saint Helena, Ascension and Tristan da Cunha, United Kingdom",123.65306482953542,0.0
 ,,Scotland,United Kingdom,2022-09-14 04:20:44,56.4907,-4.2026,2095171,15588,,,"Scotland, United Kingdom",38349.91671700255,0.7439965520714061
 ,,Turks and Caicos Islands,United Kingdom,2022-09-14 04:20:44,21.694,-71.7979,6372,36,,,"Turks and Caicos Islands, United Kingdom",16457.461645746163,0.5649717514124294
@@ -4014,4 +4015,3 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Yemen,2022-09-14 04:20:44,15.552727,48.516388,11932,2155,,,Yemen,40.00540736850519,18.06067717063359
 ,,,Zambia,2022-09-14 04:20:44,-13.133897,27.849332,333274,4017,,,Zambia,1812.852467662564,1.205314545989186
 ,,,Zimbabwe,2022-09-14 04:20:44,-19.015438,29.154857,256904,5596,,,Zimbabwe,1728.488607930322,2.178245570329773
-,,Pitcairn Islands,United Kingdom,2022-09-14 04:20:44,-24.3768,-128.3242,4,0,0,0,"Pitcairn Islands, United Kingdom",0.0,0.0
