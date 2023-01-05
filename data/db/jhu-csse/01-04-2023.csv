@@ -460,7 +460,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,Limburg,Netherlands,2023-01-05 04:21:04,51.209227,5.93387,563946,2209,,,"Limburg, Netherlands",50478.4725398563,0.391704170257436
 ,,Noord-Brabant,Netherlands,2023-01-05 04:21:04,51.561174,5.184942,1300663,3783,,,"Noord-Brabant, Netherlands",50748.5695222897,0.29085166565051823
 ,,Noord-Holland,Netherlands,2023-01-05 04:21:04,52.600906,4.918688,1409387,3508,,,"Noord-Holland, Netherlands",48945.08716188457,0.24890253706043833
-,,Overijssel,Netherlands,2023-01-05 04:21:04,52.444558,6.441722,597499,811378,,,"Overijssel, Netherlands",51401.91981115032,135.79570844470032
+,,Overijssel,Netherlands,2023-01-05 04:21:04,52.444558,6.441722,597499,1459,,,"Overijssel, Netherlands",51401.91981115032,135.79570844470032
 ,,Sint Maarten,Netherlands,2023-01-05 04:21:04,18.0425,-63.0548,10998,89,,,"Sint Maarten, Netherlands",25647.124667692737,0.8092380432805965
 ,,Unknown,Netherlands,2023-01-05 04:21:04,,,0,0,,,"Unknown, Netherlands",,
 ,,Utrecht,Netherlands,2023-01-05 04:21:04,52.084251,5.163824,705695,1581,,,"Utrecht, Netherlands",52087.19296976604,0.22403446248024997
