@@ -3991,20 +3991,20 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,British Virgin Islands,United Kingdom,2023-03-09 04:20:56,18.4207,-64.64,7305,64,,,"British Virgin Islands, United Kingdom",24159.142772100407,0.8761122518822724
 ,,Cayman Islands,United Kingdom,2023-03-09 04:20:56,19.3133,-81.2546,31472,37,,,"Cayman Islands, United Kingdom",47888.009738283625,0.1175648195221149
 ,,Channel Islands,United Kingdom,2023-03-09 04:20:56,49.3723,-2.3644,0,0,,,"Channel Islands, United Kingdom",0.0,
-,,England,United Kingdom,2023-03-09 04:20:56,52.3555,-1.1743,20629892,185707,,,"England, United Kingdom",36854.09773979406,0.900184063009152
+,,England,United Kingdom,2023-03-09 04:20:56,52.3555,-1.1743,20629892,186138,,,"England, United Kingdom",36854.09773979406,0.900184063009152
 ,,Falkland Islands (Malvinas),United Kingdom,2023-03-09 04:20:56,-51.7963,-59.5236,1930,0,,,"Falkland Islands (Malvinas), United Kingdom",55412.00114843526,0.0
 ,,Gibraltar,United Kingdom,2023-03-09 04:20:56,36.1408,-5.3536,20433,111,,,"Gibraltar, United Kingdom",60648.24433825057,0.543238878285127
 ,,Guernsey,United Kingdom,2023-03-09 04:20:56,49.448196,-2.58949,34991,66,,,"Guernsey, United Kingdom",55541.269841269845,0.18861993083935868
 ,,Isle of Man,United Kingdom,2023-03-09 04:20:56,54.2361,-4.5481,38008,116,,,"Isle of Man, United Kingdom",44698.46645968576,0.3051989054935803
 ,,Jersey,United Kingdom,2023-03-09 04:20:56,49.2138,-2.1358,66391,161,,,"Jersey, United Kingdom",60741.9945105215,0.24250274886656323
 ,,Montserrat,United Kingdom,2023-03-09 04:20:56,16.742498,-62.187366,1403,8,,,"Montserrat, United Kingdom",28065.613122624523,0.5702066999287242
-,,Northern Ireland,United Kingdom,2023-03-09 04:20:56,54.7877,-6.4923,713294,5153,,,"Northern Ireland, United Kingdom",37908.90731292517,0.7224230121100136
+,,Northern Ireland,United Kingdom,2023-03-09 04:20:56,54.7877,-6.4923,713294,5166,,,"Northern Ireland, United Kingdom",37908.90731292517,0.7224230121100136
 ,,Pitcairn Islands,United Kingdom,2023-03-09 04:20:56,-24.3768,-128.3242,4,0,,,"Pitcairn Islands, United Kingdom",5970.149253731343,0.0
 ,,"Saint Helena, Ascension and Tristan da Cunha",United Kingdom,2023-03-09 04:20:56,-7.9467,-14.3559,2166,0,,,"Saint Helena, Ascension and Tristan da Cunha, United Kingdom",38261.79120296767,0.0
-,,Scotland,United Kingdom,2023-03-09 04:20:56,56.4907,-4.2026,2155803,16764,,,"Scotland, United Kingdom",39459.72214595574,0.7776220740021236
+,,Scotland,United Kingdom,2023-03-09 04:20:56,56.4907,-4.2026,2155803,16806,,,"Scotland, United Kingdom",39459.72214595574,0.7776220740021236
 ,,Turks and Caicos Islands,United Kingdom,2023-03-09 04:20:56,21.694,-71.7979,6557,38,,,"Turks and Caicos Islands, United Kingdom",16935.27558241645,0.5795333231660821
-,,Unknown,United Kingdom,2023-03-09 04:20:56,,,0,339,,,"Unknown, United Kingdom",,
-,,Wales,United Kingdom,2023-03-09 04:20:56,52.1307,-3.7837,897541,11486,,,"Wales, United Kingdom",28596.85847193016,1.2797186980873296
+,,Unknown,United Kingdom,2023-03-09 04:20:56,,,0,338,,,"Unknown, United Kingdom",,
+,,Wales,United Kingdom,2023-03-09 04:20:56,52.1307,-3.7837,897541,11500,,,"Wales, United Kingdom",28596.85847193016,1.2797186980873296
 ,,,Uruguay,2023-03-09 04:20:56,-32.5228,-55.7658,1034303,7617,,,Uruguay,29775.022619797124,0.7364379683709706
 ,,,Uzbekistan,2023-03-09 04:20:56,41.377491,64.585262,251247,1637,,,Uzbekistan,750.6812457627086,0.6515500682595216
 ,,,Vanuatu,2023-03-09 04:20:56,-15.3767,166.9592,12014,14,,,Vanuatu,4104.824381577149,0.1165307141668054
