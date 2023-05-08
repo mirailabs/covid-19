@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "Preetam D'Souza",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
+    "cheerio": "^1.0.0-rc.12",
     "csvjson-csv2json": "^5.0.6",
     "csvjson-json2csv": "^1.0.3",
     "node-fetch": "^2.6.1"
